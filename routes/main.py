@@ -2,7 +2,7 @@ from flask import Flask, render_template, redirect, request, session
 from flask_mysqldb import MySQL
 from datetime import datetime
 from functools import wraps
-from database import db
+#from database import db --> Need to fix
 
 app = Flask(__name__)
 app.secret_key = "secret-key"
