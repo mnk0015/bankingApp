@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Welcome {{ user.name }}</title>
+  </head>
+  <body>
+    <h1>Balance</h1>
+    <p>{{ user.name }} has ${{ account.balance }} in their account.</p>
+    <form method="GET" action="{{ url_for('account.welcome') }}">
+      <input type="submit" value="Back">
+    </form>
+  </body>
+</html>

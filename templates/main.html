@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Welcome to Bank</title>
+  </head>
+  <body>
+    <h1>Welcome to Bank!</h1>
+    <form method="POST" action="{{ url_for('auth.login') }}">
+      <label for="account_number">Account Number:</label>
+      <input type="text" id="account_number" name="account_number"><br>
+
+      <label for="pin">PIN:</label>
+      <input type="password" id="pin" name="pin"><br>
+
+      <input type="submit" value="Login">
+    </form>
+
+    <form method="GET" action="{{ url_for('auth.create_account') }}">
+      <input type="submit" value="Create Account">
+    </form>
+  </body>
+</html>

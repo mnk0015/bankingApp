@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Create Account</title>
+  </head>
+  <body>
+    <h1>Create Account</h1>
+    <form method="POST" action="{{ url_for('auth.create_account') }}">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name"><br>
+
+      <label for="dob">Date of Birth:</label>
+      <input type="date" id="dob" name="dob"><br>
+
+      <label for="pin">PIN:</label>
+      <input type="password" id="pin" name="pin"><br>
+
+      <input type="submit" value="Create">
+    </form>
+
+    <form method="GET" action="{{ url_for('main') }}">
+      <input type="submit" value="Back">
+    </form>
+  </body>
+</html>

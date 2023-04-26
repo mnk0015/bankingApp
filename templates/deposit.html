@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Deposit</title>
+</head>
+<body>
+	<h2>Deposit</h2>
+	<p>{{ message }}</p>
+	<form method="POST" action="/deposit">
+		<label for="amount">Amount:</label>
+		<input type="number" id="amount" name="amount" required><br><br>
+		<input type="submit" value="Deposit">
+	</form>
+	<form method="POST" action="/account">
+		<input type="submit" value="Cancel">
+	</form>
+</body>
+</html>

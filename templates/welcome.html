@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Welcome {{ user.name }}</title>
+  </head>
+  <body>
+    <h1>Welcome {{ user.name }}</h1>
+    <form method="GET" action="{{ url_for('account.balance') }}">
+      <input type="submit" value="Check Balance">
+    </form>
+
+    <form method="GET" action="{{ url_for('account.withdraw') }}">
+      <input type="submit" value="Withdraw">
+    </form>
+
+    <form method="GET" action="{{ url_for('account.deposit') }}">
+      <input type="submit" value="Deposit">
+    </form>
+
+    <form method="GET" action="{{ url_for('auth.logout') }}">
+      <input type="submit" value="Logout">
+    </form>
+  </body>
+</html>
