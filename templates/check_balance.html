@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>Check Balance Form</h2>
+    <form method="POST" action="{{ url_for('check_balance') }}">
+        <label for="account_number">Account Number:</label>
+        <input type="text" id="account_number" name="account_number"><br><br>
+        <label for="pin">PIN:</label>
+        <input type="password" id="pin" name="pin"><br><br>
+        <input type="submit" value="Check Balance">
+    </form>
+{% endblock %}

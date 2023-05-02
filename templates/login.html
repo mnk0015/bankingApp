@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+<h1>Welcome to Bank!</h1>
+<form method="POST">
+    {{ form.csrf_token }}
+    {{ form.account_number.label }} {{ form.account_number }}<br>
+    {{ form.pin.label }} {{ form.pin }}<br>
+    <button type="submit">Login</button>
+    <a href="{{ url_for('banking.create_account') }}">Create Account</a>
+</form>
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>Deposit Form</h2>
+    <form method="POST" action="{{ url_for('deposit') }}">
+        <label for="account_number">Account Number:</label>
+        <input type="text" id="account_number" name="account_number"><br><br>
+        <label for="pin">PIN:</label>
+        <input type="password" id="pin" name="pin"><br><br>
+        <label for="amount">Amount:</label>
+        <input type="text" id="amount" name="amount"><br><br>
+        <input type="submit" value="Deposit">
+    </form>
+{% endblock %}

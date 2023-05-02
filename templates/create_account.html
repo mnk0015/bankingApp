@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}Create Account{% endblock %}
+
+{% block content %}
+<h1>Create Account</h1>
+<form method="POST">
+    {{ form.csrf_token }}
+    {{ form.name.label }} {{ form.name }}<br>
+    {{ form.dob.label }} {{ form.dob }}<br>
+    {{ form.pin.label }} {{ form.pin }}<br>
+    <button type="submit">Create</button>
+    <a href="{{ url_for('banking.index') }}">Back</a>
+</form>
+{% endblock %}

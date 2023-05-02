@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<h1>Welcome {{ user.name }}</h1>
+<a href="{{ url_for('banking.check_balance', user_id=user.id) }}">Check Balance</a><br>
+<a href="{{ url_for('banking.withdraw', user_id=user.id) }}">Withdraw Money</a><br>
+<a href="{{ url_for('banking.deposit', user_id=user.id) }}">Deposit Money</a><br>
+<a href="{{ url_for('banking.index') }}">Exit Account</a>
+{% endblock %}
